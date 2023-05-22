@@ -1,8 +1,8 @@
-import crc16ccitt from 'crc/crc16ccitt'
 import QRCode from 'qrcode'
 import { createCanvas, loadImage } from 'canvas'
 import * as fs from 'fs'
 import path from 'path'
+import { crc16ccitt } from './crc16ccitt'
 
 // Id: 00, length: 02, value: 01
 const F_00 = '000201'

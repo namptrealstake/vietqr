@@ -2,11 +2,12 @@
   "name": "vietqr",
   "version": "1.0.0",
   "description": "Implementation VietQR Code Format Specification",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "scripts": {
     "test": "jest --config jest.config.js",
-    "build": "tsc",
+    "build": "./build-script.sh",
     "lint": "eslint src/**/*.ts",
     "format": "eslint src/**/*.ts --fix",
     "pretty": "prettier --write \"src/**/*.ts\""
@@ -16,8 +17,15 @@
     "qr",
     "qrcode"
   ],
-  "author": "nampt",
+  "author": "nam.pham@realstake.io",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "directory": "git+https://github.com/namptrealstake/vietqr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/namptrealstake/vietqr/issues"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.1",
     "@types/qrcode": "^1.5.0",
@@ -34,11 +42,13 @@
     "typescript": "^5.0.4"
   },
   "files": [
-    "lib/**/*"
+    "dist/**/*"
   ],
+  "peerDependencies": {
+    "buffer": ">=6.0.3"
+  },
   "dependencies": {
     "canvas": "^2.11.2",
-    "crc": "^4.3.2",
     "fs": "^0.0.1-security",
     "qrcode": "^1.5.3"
   }
