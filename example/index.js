@@ -1,7 +1,7 @@
+const QRCode =require('../dist/cjs')
 const path = require('path')
-const QRcode = require('../lib')
 
-QRcode.generateQRCode(
+QRCode.generateQRCode(
   {
     bankCode: '970418',
     bankAccountNumber: '12345678999',
@@ -20,6 +20,6 @@ QRcode.generateQRCode(
     textPosition: 416,
     logoPath: path.join(__dirname, 'logo.png'),
     logoWidth: 120,
-    output: path.join(__dirname, './qrcode.png')
+    output: path.join(__dirname, './qrcode.png'),
   },
 )
