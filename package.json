@@ -1,5 +1,5 @@
 {
-  "name": "vietqr",
+  "name": "node-vietqr",
   "version": "1.0.0",
   "description": "Implementation VietQR Code Format Specification",
   "main": "./dist/cjs/index.js",
