@@ -1,7 +1,12 @@
-const QRCode =require('../dist/cjs')
-const path = require('path')
+import {generateQRCode} from 'node-vietqr'
+import path from 'path'
+import {fileURLToPath} from 'url';
 
-QRCode.generateQRCode(
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
+
+generateQRCode(
   {
     bankCode: '970418',
     bankAccountNumber: '12345678999',
