@@ -120,7 +120,7 @@ type Option = {
   output?: string
 }
 
-function generateQRCodeContent(info: PaymentInfoConfig) {
+export function generateQRCodeContent(info: PaymentInfoConfig) {
   const f01 = info.qrMethod === 'dynamic' ? '010212' : '010211'
   const f38 = createField38(info.bankCode, info.bankAccountNumber)
   let f54 = ''
